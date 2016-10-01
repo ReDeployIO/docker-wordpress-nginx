@@ -6,7 +6,7 @@ node {
   def img = docker.build('dockpress:latest', '.')
 
   stage 'Publish'
-  docker.withRegistry('https://560414214996.dkr.ecr.us-east-1.amazonaws.com', 'dockpress-aws') {
+  docker.withRegistry('https://560414214996.dkr.ecr.us-east-1.amazonaws.com', 'dockpress-ecr') {
      img.push('latest')
   }
 }
