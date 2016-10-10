@@ -3,10 +3,10 @@ node {
   git 'https://github.com/ReDeployIO/docker-wordpress-nginx.git'
 
   stage 'Package Docker image'
-  def img = docker.build('dockpress:latest', '.')
+  def img = docker.build('dockpress/dockpress:latest', '.')
 
   stage 'Publish'
-  docker.withRegistry('https://560414214996.dkr.ecr.us-east-1.amazonaws.com', 'dockpress-ecr') {
-     img.push('latest')
+    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
+    img.push('latest')
   }
 }
