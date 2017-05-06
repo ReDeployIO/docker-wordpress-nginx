@@ -1,5 +1,6 @@
+BUILD_EMAIL_RECIPIENTS="pressdock@gmail.com"
 def hello() {
-  NAME="Harmeek"
+  NAME="DockPress"
   println "$NAME"
 }
 return this
