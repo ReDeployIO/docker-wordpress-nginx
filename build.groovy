@@ -1,4 +1,5 @@
 def hello() {
-  println "Hello world!"
+  NAME="Harmeek"
+  println "$NAME"
 }
 return this
